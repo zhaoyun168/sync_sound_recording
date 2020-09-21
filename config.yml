@@ -1,0 +1,10 @@
+parameters:
+  member-interface:
+    host: 127.0.0.1
+    port: 3306
+    user: root
+    password:
+    driver: pdo_mysql
+    dbname: member
+    charset: utf8
+  log_dir: D:\xampp\htdocs\member_interface\log\member_interface

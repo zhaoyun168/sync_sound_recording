@@ -1,0 +1,10 @@
+parameters:
+  member-interface:
+    host: 127.0.0.1
+    port: 3306
+    user: root
+    password: 123456
+    driver: pdo_mysql
+    dbname: member
+    charset: utf8
+  log_dir: /var/log/member_interface
