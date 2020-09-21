@@ -15,5 +15,5 @@ $arr = Yaml::parse(file_get_contents(__DIR__.DIRECTORY_SEPARATOR.'config.yml'));
 $config = $arr['parameters'];
 
 $application = new Application();
-$application->add(new \Command\MemberInterfaceCommand($config));
+$application->add(new \Command\syncDataCommand($config));
 $application->run();
