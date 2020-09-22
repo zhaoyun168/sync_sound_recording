@@ -84,11 +84,18 @@ class syncDataCommand extends Command
             case 'user': // 同步员工信息
                 $this->syncUser($output);
                 break;
+            case 'dept': // 同步部门信息
+                $this->syncDept($output);
+                break;
+            case 'sound_recording': // 同步录音信息
+                $this->syncSoundRecording($output);
+                break;
         }
         return null;
     }
 
     /**
+     * 同步员工信息
      * @param $output
      * @return bool
      * @throws \Doctrine\DBAL\DBALException
@@ -98,10 +105,46 @@ class syncDataCommand extends Command
         $output->writeln(sprintf('[%s]', date('Y-m-d H:i:s')));
         $startTime = microtime(true);
 
-        //同步员工信息
+        //开始同步员工信息
         
         $endTime = microtime(true);
-        $output->writeln(sprintf('member interface have finished successfully, time:%s', ($endTime - $startTime)));
+        $output->writeln(sprintf('sync user have finished successfully, time:%s', ($endTime - $startTime)));
+        return true;
+    }
+
+    /**
+     * 同步部门信息
+     * @param $output
+     * @return bool
+     * @throws \Doctrine\DBAL\DBALException
+     */
+    private function syncDept($output)
+    {
+        $output->writeln(sprintf('[%s]', date('Y-m-d H:i:s')));
+        $startTime = microtime(true);
+
+        //开始同步部门信息
+        
+        $endTime = microtime(true);
+        $output->writeln(sprintf('sync user have finished successfully, time:%s', ($endTime - $startTime)));
+        return true;
+    }
+
+    /**
+     * 同步录音信息
+     * @param $output
+     * @return bool
+     * @throws \Doctrine\DBAL\DBALException
+     */
+    private function syncSoundRecording($output)
+    {
+        $output->writeln(sprintf('[%s]', date('Y-m-d H:i:s')));
+        $startTime = microtime(true);
+
+        //开始同步录音信息
+        
+        $endTime = microtime(true);
+        $output->writeln(sprintf('sync user have finished successfully, time:%s', ($endTime - $startTime)));
         return true;
     }
 
